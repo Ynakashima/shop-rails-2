@@ -12,9 +12,9 @@ class ShopstyleproductsApiWrapper
 
     if data["products"]
       data["products"].each do |product|
-        info = { url: product["clickUrl"] }
+        # info = { url: product["clickUrl"] }
 
-        wrapper = Product.new(product["name"], product["retailer"]["name"], product["priceLabel"])
+        wrapper = Product.new(product["image"]["sizes"]["Small"]["url"], product["name"], product["retailer"]["name"], product["priceLabel"], product["clickUrl"])
 
         product_list << wrapper
       end

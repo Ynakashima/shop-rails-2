@@ -1,11 +1,12 @@
 class Product
-  attr_reader :name, :price, :retailer, :url
+  attr_reader :image, :name, :price, :retailer, :url
 
-  def initialize(name, retailer, priceLabel)
+  def initialize(image, name, retailer, priceLabel, url)
+    @image = image
     @name = name
     @retailer = retailer
     @priceLabel = priceLabel
-    # @url = options[:url]
+    @url = url
   end
 
   class << self

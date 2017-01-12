@@ -3,8 +3,16 @@ class ProductsController < ApplicationController
     @product = params[:name]
   end
 
+  def show
+    @product = Product.find(params[:id])
+    render json: @product
+  end
+
   def index
     @product = params[:name]
-    Product.search(@product)
+    puts @product
+    product = Product.search(@product)
+    puts product
+    render json: product
   end
 end
