@@ -1,7 +1,8 @@
 class Product
-  attr_reader :image, :name, :price, :retailer, :url
+  attr_reader :id, :image, :name, :price, :retailer, :url
 
-  def initialize(image, name, retailer, priceLabel, url)
+  def initialize(id, image, name, retailer, priceLabel, url)
+    @id = id
     @image = image
     @name = name
     @retailer = retailer

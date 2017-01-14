@@ -1,12 +1,7 @@
 class ProductsController < ApplicationController
-  def search
-    @product = params[:name]
-  end
-
-  def show
-    @product = Product.find(params[:id])
-    render json: @product
-  end
+  # def search
+  #   @product = params[:name]
+  # end
 
   def index
     @product = params[:name]
