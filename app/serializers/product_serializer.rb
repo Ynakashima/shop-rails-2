@@ -1,3 +1,3 @@
 class ProductSerializer < ActiveModel::Serializer
-  attributes :id, :image, :name, :price, :retailer, :url
+  attributes :id, :image, :name, :retailer, :priceLabel, :url
 end
