@@ -6,7 +6,7 @@ class ShopstyleproductsApiWrapper
   LAST = 1000
 
   def self.listproducts(search_term)
-    url = BASE_URL + ID + "&fts=#{search_term}"
+    url = BASE_URL + ID + "&fts=#{search_term}&limit=25"
     data = HTTParty.get(url)
     product_list = []
 
