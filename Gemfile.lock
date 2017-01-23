@@ -81,6 +81,9 @@ GEM
     jbuilder (2.6.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
+    jquery-rails (2.3.0)
+      railties (>= 3.0, < 5.0)
+      thor (>= 0.14, < 2.0)
     json (1.8.3)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
@@ -177,6 +180,7 @@ DEPENDENCIES
   ember-cli-rails
   httparty
   jbuilder (~> 2.0)
+  jquery-rails (~> 2.3.0)
   pg
   puma
   rack-cors
