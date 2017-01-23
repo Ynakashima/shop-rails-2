@@ -5,9 +5,6 @@ class ProductsController < ApplicationController
 
   def index
     @product = params[:name]
-      if params[:name] == nil
-        puts "Please enter search term"
-      end
     puts @product
     product = Product.search(@product)
     puts product
