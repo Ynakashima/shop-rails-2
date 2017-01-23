@@ -6,13 +6,12 @@ class ShopstyleproductsApiWrapper
   LAST = 1000
 
   def self.listproducts(search_term)
-    url = BASE_URL + ID + "&fts=#{search_term}&limit=25"
+    url = BASE_URL + ID + "&fts=#{search_term}&limit=26"
     data = HTTParty.get(url)
     product_list = []
 
     if data["products"]
       data["products"].each do |product|
-        # info = { url: product["clickUrl"] }
 
         wrapper = Product.new(product["id"], product["image"]["sizes"]["XLarge"]["url"], product["name"], product["retailer"]["name"], product["priceLabel"], product["clickUrl"])
 
